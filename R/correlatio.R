@@ -8,7 +8,7 @@
 #'
 #' @importFrom Rdpack reprompt
 #'
-#' @name mysml
+#' @name correlatio
 #'
 #' @references
 #' 

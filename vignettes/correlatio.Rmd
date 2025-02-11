@@ -71,6 +71,34 @@ There are many more details in the output 'details', such as the mean of x and y
 test1$details
 ```
 
+## Linearly transform the simulated data
+
+In order to obtain values which more resemble data from our specific research field, the function 'lineartransform' can be used. Let's apply this function to the three datasets in testSim. For example, the values in each variable shall range between 1 and 5, with 0 decimal digits, i.e., only integer values. Due to rounding the transformed values, the previous correlation will change somewhat.
+
+```{r test2a, eval = TRUE}
+testSimTransformed <- lapply(testSim, function(x) {
+    apply(x, 2, function(y) {
+        correlatio::lineartransform(futureRange = c(1, 5), vec = y, digits = 0)
+    })
+})
+```
+
+Now we run the 'corrio' function again, this time with the first of the three datasets of testSimTransformed. This will be followed by the numeric output and the visualization.
+
+```{r test2b, eval = TRUE}
+test2 <- correlatio::corrio(data=testSimTransformed[[1]])
+test2$dat
+```
+
+The visualization can be seen in Figure 2.
+
+![Figure 2: Two variables, each having 6 observations. In the legend, s means that the pair of values go in the same direction, c stands for contrary.](plot2Integer.png){width=500pt}
+<br>
+In Figure 2 we see that for the third and the sixth value, the y variable contains two values which are identical with the mean of y, namely 3. Therefore the legend of Figure 2 shows n for 'no direction', i.e., these pairwise combinations cannot be determined, because one of the pair of values goes in no direction.
+
+# Conclusion
+
+It is absolutely clear that the visualizations of this correlatio package may appear totally uninformative, once that the variables contain 10, 20, or far more values. However, even then someone might come up with interesting ideas of how to benefit from this type of visualization. For example, assume you have 200 observations for a correlated pair of variables. You might want to randomly sample a subset of 10 or 20 values from the 200 observations, and look at the resulting plot while trying to figure out why it looks the way it does.
 
 ```{r echo=TRUE, eval = FALSE}
 # sessionInfo()
