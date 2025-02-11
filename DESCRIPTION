@@ -22,5 +22,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-LazyData: true
 BugReports: https://github.com/mmiche/correlatio/issues
