@@ -20,7 +20,7 @@
 #
 #' @references
 #'
-#' [pdf, see headline: Simulating data with known correlations](https://stirlingcodingclub.github.io/simulating_data/index.pdf)
+#' \href{https://stirlingcodingclub.github.io/simulating_data/index.pdf}{pdf, see headline: Simulating data with known correlations}
 #
 #' @export
 #
