@@ -24,7 +24,7 @@ Apply the bootstrap evaluation of the model performance.
 simcor(obs = 1000, rhos = c(-.8, .7))
 }
 \references{
-[pdf, see headline: Simulating data with known correlations](https://stirlingcodingclub.github.io/simulating_data/index.pdf)
+\href{https://stirlingcodingclub.github.io/simulating_data/index.pdf}{pdf, see headline: Simulating data with known correlations}
 }
 \author{
 Marcel Miché

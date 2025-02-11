@@ -25,7 +25,7 @@ someValues <- stats::rnorm(n=10)
 lineartransform(futureRange = c(1, 5), vec = someValues, digits = 0)
 }
 \references{
-[lm; linear model command from the stats package](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html)
+\href{https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html}{lm; linear model command from the stats package}
 }
 \author{
 Marcel Miché
