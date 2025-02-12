@@ -1,7 +1,7 @@
 ---
 title: "correlatio"
 author: "Marcel Miché"
-date: "2025-02-11"
+date: "2025-02-12"
 output:
   html_document:
     theme: yeti
@@ -26,7 +26,7 @@ Main reason: Etymology of 'correlation' is 'correlatio'. First: 'cor-', meaning 
 
 Source: [https://www.etymonline.com/word/correlation](https://www.etymonline.com/word/correlation)
 
-Other reason: There are plenty of R packages which provide all sorts of possibilities regarding correlation, except for what this correlatio package offers. These other packages, which I was able to find, are called: [correlation](https://easystats.github.io/correlation/), [corrr](https://corrr.tidymodels.org/), [correlated](https://cran.r-project.org/web/packages/simstudy/vignettes/correlated.html), [ppcor](https://cran.r-project.org/web/packages/ppcor/index.html), [corrmorant](https://github.com/r-link/corrmorant), [corrgrapher](https://modeloriented.github.io/corrgrapher/), [linkspotter](https://linkspotter.sigmant.net/index.html).
+Other reason: There are plenty of R packages which provide all sorts of possibilities regarding correlation, except for what this correlatio package offers. These other packages, which I was able to find, are called: [correlation](https://easystats.github.io/correlation/), [corrr](https://corrr.tidymodels.org/), [correlated](https://CRAN.R-project.org/package=correlated), [ppcor](https://CRAN.R-project.org/package=ppcor), [corrmorant](https://github.com/r-link/corrmorant), [corrgrapher](https://modeloriented.github.io/corrgrapher/), [linkspotter](https://linkspotter.sigmant.net/index.html).
 
 ## Download of this correlatio R package
 
