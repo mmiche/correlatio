@@ -28,9 +28,9 @@ Source: [https://www.etymonline.com/word/correlation](https://www.etymonline.com
 
 Other reason: There are plenty of R packages which provide all sorts of possibilities regarding correlation, except for what this correlatio package offers. These other packages, which I was able to find, are called: [correlation](https://easystats.github.io/correlation/), [corrr](https://corrr.tidymodels.org/), [correlated](https://cran.r-project.org/web/packages/simstudy/vignettes/correlated.html), [ppcor](https://cran.r-project.org/web/packages/ppcor/index.html), [corrmorant](https://github.com/r-link/corrmorant), [corrgrapher](https://modeloriented.github.io/corrgrapher/), [linkspotter](https://linkspotter.sigmant.net/index.html).
 
-## Dowload of this correlatio R package
+## Download of this correlatio R package
 
-This correlatio R package can be downloaded from GitHub, e.g., by running these lines of code in R:
+This correlatio R package can be downloaded from CRAN. Alternatively, from GitHub, e.g., by running these lines of code in R:
 ```{r echo=TRUE, eval = FALSE}
 # Note: The R package devtools must have been installed, in order for this line of code to work:
 devtools::install_github(repo="https://github.com/mmiche/correlatio",
