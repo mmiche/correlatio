@@ -2,8 +2,10 @@ Package: correlatio
 Type: Package
 Title: Visualize Details Behind Pearson's Correlation Coefficient
 Version: 0.1.0
-Author: Marcel Miché
-Maintainer: Marcel Miché <marcel.miche.predictme@gmail.com>
+Authors@R: person(given = "Marcel",
+                    family = "Miché",
+                    role = c("aut", "cre"),
+                    email = "marcel.miche.predictme@gmail.com")
 Description: This R package can help visualizing what is summarized in Pearson's correlation coefficient.
 License: MIT + file LICENSE
 Repository: GitHub
