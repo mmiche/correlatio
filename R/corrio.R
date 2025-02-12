@@ -1,6 +1,6 @@
 #' Apply and visualize Pearson's product-moment correlation.
 #
-#' @description Compute all components which are part of Pearson's correlation coefficient and visualize the most important part of what is summarized in the correlation coefficient. This most important part is the differences between the values of each variable from their respective mean. While it may appear superflous for some people to visualize this part, other people may benefit from it. See vignette of this 'correlatio' package for further explanations.
+#' @description Compute all components which are part of Pearson's correlation coefficient and visualize the most important part of what is summarized in the correlation coefficient. This most important part is the difference between the values of each variable from their respective mean. While it may appear superflous for some people to visualize this part, other people may benefit from it. See vignette of this 'correlatio' package for further explanations.
 #
 #' @param data A data.frame with two columns, which shall be correlated by Pearson's product-moment method.
 #

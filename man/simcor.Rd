@@ -18,10 +18,9 @@ a list with as many data.frames (each consisting of two columns) as there are va
 Simulate pairs of variables with a predefined correlation between them.
 }
 \examples{
-# Simulate a list with two data.frames. The first one contains
-# contains variables that are correlated by -.8, the second one
-# by .7. Both data.frames contain 1000 observations.
-simcor(obs = 1000, rhos = c(-.8, .7))
+# Simulate a list with two data.frames. The first one contains variables that are correlated
+# around -.8, the second one around .7. Both data.frames contain 200 observations.
+simcor(obs = 200, rhos = c(-.8, .7))
 }
 \references{
 \href{https://stirlingcodingclub.github.io/simulating_data/index.pdf}{pdf, see headline: Simulating data with known correlations}

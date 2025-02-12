@@ -13,10 +13,9 @@
 #' @importFrom stats rnorm cor
 #
 #' @examples
-#' # Simulate a list with two data.frames. The first one contains
-#' # contains variables that are correlated by -.8, the second one
-#' # by .7. Both data.frames contain 1000 observations.
-#' simcor(obs = 1000, rhos = c(-.8, .7))
+#' # Simulate a list with two data.frames. The first one contains variables that are correlated
+#' # around -.8, the second one around .7. Both data.frames contain 200 observations.
+#' simcor(obs = 200, rhos = c(-.8, .7))
 #
 #' @references
 #'
