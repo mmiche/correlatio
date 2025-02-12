@@ -1,6 +1,6 @@
 #' Linearly transform one scale into another scale.
 #
-#' @description Apply the default random forest model to the data.
+#' @description Transform the values of a variable into other values, by using the linear model. Additionally, select the number of decimal digits of the transformed values.
 #
 #' @param futureRange Vector that shows the range of the new scale, e.g., c(1, 5).
 #

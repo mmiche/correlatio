@@ -15,7 +15,7 @@ simcor(obs = 100, rhos = c(-0.5, 0.5))
 a list with as many data.frames (each consisting of two columns) as there are values passed to the function argument 'rhos'.
 }
 \description{
-Apply the bootstrap evaluation of the model performance.
+Simulate pairs of variables with a predefined correlation between them.
 }
 \examples{
 # Simulate a list with two data.frames. The first one contains

@@ -17,7 +17,7 @@ lineartransform(futureRange = c(1, 5), vec = NULL, digits = NULL)
 a vector with the linearly transformed new values, rounded to how many digits the user has set the function argument 'digits'.
 }
 \description{
-Apply the default random forest model to the data.
+Transform the values of a variable into other values, by using the linear model. Additionally, select the number of decimal digits of the transformed values.
 }
 \examples{
 someValues <- stats::rnorm(n=10)

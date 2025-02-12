@@ -40,7 +40,7 @@ details is a list with 12 objects, each of which contains an explanation as attr
 plot1 and plot2 are two ways of visualizing the connection between the individual values and their respective mean value.
 }
 \description{
-Apply the logistic regression model to the data.
+Compute all components which are part of Pearson's correlation coefficient and visualize the most important part of what is summarized in the correlation coefficient. This most important part is the differences between the values of each variable from their respective mean. While it may appear superflous for some people to visualize this part, other people may benefit from it. See vignette of this 'correlatio' package for further explanations.
 }
 \examples{
 simData <- simcor(obs=100, rhos = .6)

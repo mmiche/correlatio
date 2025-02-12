@@ -1,6 +1,6 @@
 #' Simulate two correlated variables.
 #
-#' @description Apply the bootstrap evaluation of the model performance.
+#' @description Simulate pairs of variables with a predefined correlation between them.
 #
 #' @param obs A single integer that determines the number of simulated observations in each of the pair of variables.
 #

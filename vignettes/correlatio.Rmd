@@ -93,12 +93,33 @@ test2$dat
 The visualization can be seen in Figure 2.
 
 ![Figure 2: Two variables, each having 6 observations. In the legend, s means that the pair of values go in the same direction, c stands for contrary.](plot2Integer.png){width=500pt}
+
 <br>
 In Figure 2 we see that for the third and the sixth value, the y variable contains two values which are identical with the mean of y, namely 3. Therefore the legend of Figure 2 shows n for 'no direction', i.e., these pairwise combinations cannot be determined, because one of the pair of values goes in no direction.
 
 # Conclusion
 
-It is absolutely clear that the visualizations of this correlatio package may appear totally uninformative, once that the variables contain 10, 20, or far more values. However, even then someone might come up with interesting ideas of how to benefit from this type of visualization. For example, assume you have 200 observations for a correlated pair of variables. You might want to randomly sample a subset of 10 or 20 values from the 200 observations, and look at the resulting plot while trying to figure out why it looks the way it does.
+The visualizations of this correlatio package may appear uninformative, once each variable contains 10, 20, or far more values. However, even then someone might come up with interesting ideas of how to benefit from this type of visualization. For example, assume you have 200 observations for a correlated pair of variables. You might want to randomly sample a subset of 10 or 20 values from the 200 observations, and look at the resulting plot while trying to figure out why it looks the way it does.
+
+# What if?
+
+What if you wanted to visualize two correlated variables that have extremely different values? Example pair of such variables:
+
+```{r whatif, eval = TRUE}
+v1 <- c(6.58, 7.02, 6.95, 8.6, 6.81, 6.75, 7.65)
+v2 <- c(176, 302, 194, 325, 318, 309, 275)
+```
+
+If these two variables were to be visualized in the same plot, the distances between v1 and the mean of v1 would not be visible, because the values of v2 determine the y-axis of the plot. In such a case, z-transform both variables, before visualizing them. The correlation between v1 and v2 is .44.
+
+```{r whatifSolve, eval = TRUE}
+test3 <- correlatio::corrio(data=data.frame(z1=scale(v1), z2=scale(v2)), visualize = TRUE)
+test3$dat
+```
+
+The visualization can be seen in Figure 3.
+
+![Figure 3: Two variables z1 and z2. In the legend, s means that the pair of values go in the same direction, c stands for contrary.](plot2z.png){width=500pt}
 
 ```{r echo=TRUE, eval = FALSE}
 # sessionInfo()
