@@ -53,7 +53,7 @@ Figure 1 shows what the etymology of the word correlation says: Together, i.e., 
 
 First, why not? Some people might benefit, while nobody gets harmed. Second, in some scientific fields, a visualization of this kind may contribute to better, i.e., more thoroughly informed, scientific decisions. It may also contribute to fruitful discussions about whether or not assuming a continuous scale for one or more theoretical constructs can be defended (Heine and Heene, 2024; Feuerstahler, 2023).
 
-Furthermore, Pearson's correlation coefficient is the basis, upon which every version of linear regression modeling rests. That is, if computing correlations cannot be defended, then using linear regression models also cannot be defended. At the very least, visualizing the most important part of **r** may increase researchers' awareness of limitations, regarding real-world validity of constructs, which otherwise can easily be overlooked of forgotten (Zyphur 2020a, 2020b; Zorich, 2025; Gardner and Neufeld, 2013).
+Furthermore, Pearson's correlation coefficient is the basis, upon which every version of linear regression modeling rests. That is, if computing correlations cannot be defended, then using linear regression models also cannot be defended. At the very least, visualizing the most important part of **r** may increase researchers' awareness of limitations, regarding real-world validity of constructs, which otherwise can easily be overlooked or forgotten (Zyphur 2020a, 2020b; Zorich, 2025; Gardner and Neufeld, 2013).
 
 ## The simulated data of Figure 1
 
