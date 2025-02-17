@@ -1,7 +1,7 @@
 ---
 title: "correlatio"
 author: "Marcel Miché"
-date: "2025-02-12"
+date: "2025-02-17"
 output:
   html_document:
     theme: yeti
@@ -121,6 +121,7 @@ The visualization can be seen in Figure 3.
 
 ![Figure 3: Two variables z1 and z2. In the legend, s means that the pair of values go in the same direction, c stands for contrary.](plot2z.png){width=500pt}
 
+<br>
 ```{r echo=TRUE, eval = FALSE}
 # sessionInfo()
 R version 4.4.0 (2024-04-24)
@@ -176,8 +177,8 @@ Gardner, R. C., & Neufeld, R. W. (2013). What the correlation coefficient really
 
 Heine, J.-H., & Heene, M. (2024). Measurement and mind: Unveiling the self-delusion of metrification in psychology. *Measurement: Interdisciplinary Research and Perspectives*. [DOI](https://doi.org/10.1080/15366367.2024.2329958)
 
-Zyphur, M. J., & Pierides, D. C. (2020a). Statistics and probability have always been value-laden: An historical ontology of quantitative research methods. *Journal of Business Ethics, 167*(1), 1-18.
+Zyphur, M. J., & Pierides, D. C. (2020a). Statistics and probability have always been value-laden: An historical ontology of quantitative research methods. *Journal of Business Ethics, 167*(1), 1-18. [DOI](https://doi.org/10.1007/s10551-019-04187-8)
 
-Zyphur, M. J., & Pierides, D. C. (2020b). Making quantitative research work: From positivist dogma to actual social scientific inquiry. *Journal of Business Ethics, 167*, 49-62.
+Zyphur, M. J., & Pierides, D. C. (2020b). Making quantitative research work: From positivist dogma to actual social scientific inquiry. *Journal of Business Ethics, 167*, 49-62. [DOI](https://doi.org/10.1007/s10551-019-04189-6)
 
 Zorich, J. N. (2025). *The History of Correlation*. Taylor & Francis. [DOI](https://doi.org/10.1201/9781003527893)
