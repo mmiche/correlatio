@@ -16,7 +16,7 @@ devtools::install_github(repo = "https://github.com/mmiche/correlatio",
                          build_vignettes = TRUE)
 ```
 
-## From CRAN (as soon as available)
+## From CRAN
 ```R
 install.packages(pkgs = c("correlatio"), dependencies = TRUE)
 ```
