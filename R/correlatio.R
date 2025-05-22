@@ -3,8 +3,6 @@
 #' @description This R package can help visualizing what is summarized in Pearson's correlation coefficient.
 #' 
 #' All R packages that have been used in, as well as for developing, this correlatio package, are listed below. Thanks to the many R package developers!
-#' 
-#' @docType package
 #'
 #' @importFrom Rdpack reprompt
 #'
@@ -27,3 +25,5 @@
 #' \insertRef{Rdpack}{correlatio}
 #' 
 NULL
+
+"_PACKAGE"
