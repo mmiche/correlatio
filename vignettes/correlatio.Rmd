@@ -123,7 +123,7 @@ The visualization can be seen in Figure 3.
 
 # From another angle
 
-A correlation between two continuous variables can also be visualized geometrically. That is, the Pearson correlation coefficient **is** an angle in the unit circle, nicely shown in this [URL](https://tex.stackexchange.com/questions/233132/diagramming-unit-circle-and-sine-wave-with-tikz). The cosine wave ranges from minus one to plus one, which is the reason why the Pearson correlation coefficient always is within this range.
+A correlation between two continuous variables can also be visualized geometrically. That is, the Pearson correlation coefficient **is** an angle in the unit circle (search the web: diagramming-unit-circle-and-sine-wave-with-tikz; sorry, but CRAN does not permit using the URL as a direct weblink). The cosine wave ranges from minus one to plus one, which is the reason why the Pearson correlation coefficient always is within this range.
 
 The function 'corvisualize' returns the geometric visualization of a bivariate correlation between two continuous variables. It shows the perpendicular from the outcome vector onto the predictor vector in (two-dimensional) linear space. This way, the regression weight of the simple linear regression between predictor and outcome can be seen in the plot (where the perpendicular crosses (or meets) the vector that represents the predictor (x-axis). BEWARE: The spread of the vector (square root of the variance of the predictor) is what determines the predictor unit. See the example below.
 
