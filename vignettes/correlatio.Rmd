@@ -123,9 +123,9 @@ The visualization can be seen in Figure 3.
 
 # From another angle
 
-A correlation between two continuous variables can also be visualized geometrically. That is, the Pearson correlation coefficient **is** an angle in the unit circle (search the web: diagramming-unit-circle-and-sine-wave-with-tikz; sorry, but CRAN does not permit using the URL as a direct weblink). The cosine wave ranges from minus one to plus one, which is the reason why the Pearson correlation coefficient always is within this range.
+A correlation between two continuous variables can also be visualized geometrically. That is, the Pearson correlation coefficient **is** an angle in the unit circle (see this online illustration by [Tim Elton](https://www.geogebra.org/m/cNEtsbvC)). The cosine wave ranges from minus one to plus one (across the vertical axis), which is the reason why the Pearson correlation coefficient always is within this range.
 
-The function 'corvisualize' returns the geometric visualization of a bivariate correlation between two continuous variables. It shows the perpendicular from the outcome vector onto the predictor vector in (two-dimensional) linear space. This way, the regression weight of the simple linear regression between predictor and outcome can be seen in the plot (where the perpendicular crosses (or meets) the vector that represents the predictor (x-axis). BEWARE: The spread of the vector (square root of the variance of the predictor) is what determines the predictor unit. See the example below.
+The function 'corvisualize' returns the geometric visualization of a bivariate correlation between two continuous variables. It shows the perpendicular from the outcome vector onto the predictor vector in (two-dimensional) linear space. This way, the regression weight of the simple linear regression between predictor and outcome can be seen in the plot (where the perpendicular crosses (or meets) the vector that represents the predictor (x-axis)). BEWARE: The spread of the vector (square root of the variance of the predictor) is what determines the predictor unit. See the example below.
 
 ```{r anglePlot, eval = TRUE}
 positiveCorDat <- data.frame(x1=c(5,9,3,6,2,9,3,7,2,8),
@@ -191,6 +191,8 @@ loaded via a namespace (and not attached):
 ```
 
 **References**
+
+Elton, T. (no date). Sin cos and Tan animated from the Unit Circle, GeoGebra. Available at: [https://www.geogebra.org/m/cNEtsbvC](https://www.geogebra.org/m/cNEtsbvC) (Accessed: 23 May 2025).
 
 Feuerstahler, L. (2023). Scale type revisited: Some misconceptions, misinterpretations, and recommendations. *Psych*. [DOI](https://doi.org/10.3390/psych5020018)
 
