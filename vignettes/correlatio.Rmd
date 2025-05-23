@@ -1,7 +1,7 @@
 ---
 title: "correlatio"
 author: "Marcel Miché"
-date: "2025-02-17"
+date: "2025-05-23"
 output:
   html_document:
     theme: yeti
@@ -120,6 +120,29 @@ test3$dat
 The visualization can be seen in Figure 3.
 
 ![Figure 3: Two variables z1 and z2. In the legend, s means that the pair of values go in the same direction, c stands for contrary.](plot2z.png){width=500pt}
+
+# From another angle
+
+A correlation between two continuous variables can also be visualized geometrically. That is, the Pearson correlation coefficient **is** an angle in the unit circle, nicely shown in this [URL](https://tex.stackexchange.com/questions/233132/diagramming-unit-circle-and-sine-wave-with-tikz). The cosine wave ranges from minus one to plus one, which is the reason why the Pearson correlation coefficient always is within this range.
+
+The function 'corvisualize' returns the geometric visualization of a bivariate correlation between two continuous variables. It shows the perpendicular from the outcome vector onto the predictor vector in (two-dimensional) linear space. This way, the regression weight of the simple linear regression between predictor and outcome can be seen in the plot (where the perpendicular crosses (or meets) the vector that represents the predictor (x-axis). BEWARE: The spread of the vector (square root of the variance of the predictor) is what determines the predictor unit. See the example below.
+
+```{r anglePlot, eval = TRUE}
+positiveCorDat <- data.frame(x1=c(5,9,3,6,2,9,3,7,2,8),
+                             x2=c(2,6,7,8,3,5,5,8,3,9))
+correlatio::corvisualize(data=positiveCorDat, x="x1", y="x2", visualize=TRUE)
+```
+
+The predictor's length is the square root of column x1, which is 2.796824 (= one unit). The perpendicular (vertical dashed line) crosses the predictor vector at 1.215665. Before computing anything, we can see that the crossing occurs somewhere between one third and one half of the (one unit) length of the predictor vector. Dividing 1.215665 by 2.796824 results in 0.4346591, which is the regression weight estimate.
+
+When scaling both the predictor and the outcome (mean = 0, standard deviation = 1), the b and the beta regression weight are identical, which is this example is 0.5038131:
+
+```{r anglePlot2, eval = TRUE}
+positiveCorDat <- data.frame(x1=c(5,9,3,6,2,9,3,7,2,8),
+                             x2=c(2,6,7,8,3,5,5,8,3,9))
+positiveCorDat.z <- data.frame(scale(positiveCorDat))
+correlatio::corvisualize(data=positiveCorDat.z, x="x1", y="x2", visualize=TRUE)
+```
 
 <br>
 ```{r echo=TRUE, eval = FALSE}
