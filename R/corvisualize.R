@@ -13,7 +13,7 @@
 #' @details Any textbook on linear algebra and/or analytic geometry usually contains at least one numeric example and a geometric visualization of a correlation between two continuous variables. I want to express my gratitude to Dr. Johannes Andres (who taught statistics as well as multivariate statistics to psychology students, of which I was one).
 #
 #' @return a list with results (name: res), and one graph as elements (name: anglePlot).
-#' res is a list with 14 objects:
+#' res is a list with 13 objects:
 #' \enumerate{
 #' \item covMat Covariance matrix of predictor and outcome.
 #' \item covPredMat Covariance matrix of predictor and the predicted outcome, based on the simple linear regression estimates.
@@ -27,8 +27,7 @@
 #' \item yhatSpread Square root of the difference between outcome variance and variance of the predicted outcome. If the angle is greater than 90 degrees, yhatSpread is multiplied by minus one.
 #' \item bWeight The regression weight (slope) of the simple linear regression of the predictor and the outcome variable.
 #' \item betaWeight Same as bWeight, if the predictor and the outcome have both been scaled (mean = 0, standard deviation = 1).
-#' \item anglePlot Visualization of the regression weight.
-#' \item plotDf tibble with coordinates for anglePlot.
+#' \item anglePlot Visualization of the regression weight, unless the function argument visualize has been set to FALSE.
 #' }
 #
 #' @author Marcel Miché
@@ -182,7 +181,7 @@ corvisualize <- function(data=NULL, x="x1", y="x2", visualize=TRUE) {
                   axis.title.y = element_text(size=16))
 
         res[["anglePlot"]] <- anglePlot
-        res[["plotDf"]] <- dfOut
+        # res[["plotDf"]] <- dfOut # Not needed, it is part of ggplot2 object anglePlot
     }
     return(res)
 }
