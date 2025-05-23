@@ -1,7 +1,7 @@
 Package: correlatio
 Type: Package
 Title: Visualize Details Behind Pearson's Correlation Coefficient
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person(given = "Marcel",
                     family = "Miché",
                     role = c("aut", "cre"),
