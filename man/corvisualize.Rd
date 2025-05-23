@@ -17,7 +17,7 @@ corvisualize(data = NULL, x = "x1", y = "x2", visualize = TRUE)
 }
 \value{
 a list with results (name: res), and one graph as elements (name: anglePlot).
-res is a list with 13 objects:
+res is a list with 14 objects:
 \enumerate{
 \item covMat Covariance matrix of predictor and outcome.
 \item covPredMat Covariance matrix of predictor and the predicted outcome, based on the simple linear regression estimates.
@@ -39,7 +39,7 @@ res is a list with 13 objects:
 Visualize the correlation coefficient geometrically, i.e., use the angle between the linear vector that represents the predictor and the linear vector that represents the outcome, show where the dropping of the perpendicular lands on the linear vector that represents the predictor in the two-dimensional linear space, finally read b regression weight from the simple linear regression between predictor and outcome; or read the beta regression weight, in case the predictor and outcome have been scaled (mean = zero, standard deviation = one).
 }
 \details{
-Any textbook on linear algebra and/or analytic geometry usually contains at least one numeric example and a geometric visualization of a correlation between two continuous variables.
+Any textbook on linear algebra and/or analytic geometry usually contains at least one numeric example and a geometric visualization of a correlation between two continuous variables. I want to express my gratitude to Dr. Johannes Andres (who taught statistics as well as multivariate statistics to psychology students, of which I was one).
 }
 \examples{
 positiveCorDat <- data.frame(x1=c(5,9,3,6,2,9,3,7,2,8),

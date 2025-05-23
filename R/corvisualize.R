@@ -10,10 +10,10 @@
 #
 #' @param y A single character, i.e., the column name of the data.frame which shall be the outcome (dependent variable) in the simple linear regression.
 #
-#' @details Any textbook on linear algebra and/or analytic geometry usually contains at least one numeric example and a geometric visualization of a correlation between two continuous variables.
+#' @details Any textbook on linear algebra and/or analytic geometry usually contains at least one numeric example and a geometric visualization of a correlation between two continuous variables. I want to express my gratitude to Dr. Johannes Andres (who taught statistics as well as multivariate statistics to psychology students, of which I was one).
 #
 #' @return a list with results (name: res), and one graph as elements (name: anglePlot).
-#' res is a list with 13 objects:
+#' res is a list with 14 objects:
 #' \enumerate{
 #' \item covMat Covariance matrix of predictor and outcome.
 #' \item covPredMat Covariance matrix of predictor and the predicted outcome, based on the simple linear regression estimates.
