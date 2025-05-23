@@ -13,7 +13,7 @@ corvisualize(data = NULL, x = "x1", y = "x2", visualize = TRUE)
 
 \item{y}{A single character, i.e., the column name of the data.frame which shall be the outcome (dependent variable) in the simple linear regression.}
 
-\item{visualize}{A single boolean value (default: TRUE), which determines whether the data shall be visualized in two plots.}
+\item{visualize}{A single boolean value (default: TRUE), which determines whether the data shall be visualized.}
 }
 \value{
 a list with results (name: res), and one graph as elements (name: anglePlot).

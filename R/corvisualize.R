@@ -4,7 +4,7 @@
 #
 #' @param data A data.frame with two columns, which shall be correlated by Pearson's product-moment method.
 #
-#' @param visualize A single boolean value (default: TRUE), which determines whether the data shall be visualized in two plots.
+#' @param visualize A single boolean value (default: TRUE), which determines whether the data shall be visualized.
 #
 #' @param x A single character, i.e., the column name of the data.frame which shall be the predictor (independent variable) in the simple linear regression.
 #

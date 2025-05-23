@@ -9,7 +9,7 @@ corrio(data = NULL, visualize = TRUE)
 \arguments{
 \item{data}{A data.frame with two columns, which shall be correlated by Pearson's product-moment method.}
 
-\item{visualize}{A single boolean value (default: TRUE), which determines whether the data shall be visualized in two plots.}
+\item{visualize}{A single boolean value (default: TRUE), which determines whether the data shall be visualized.}
 }
 \value{
 a list with a data.frame (name: dat), a list (name: details), and two graphs as elements (plot1 and plot2).

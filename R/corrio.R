@@ -4,7 +4,7 @@
 #
 #' @param data A data.frame with two columns, which shall be correlated by Pearson's product-moment method.
 #
-#' @param visualize A single boolean value (default: TRUE), which determines whether the data shall be visualized in two plots.
+#' @param visualize A single boolean value (default: TRUE), which determines whether the data shall be visualized.
 #
 #' @return a list with a data.frame (name: dat), a list (name: details), and two graphs as elements (plot1 and plot2).
 #' dat contains these five columns:
