@@ -52,44 +52,44 @@
 #' @export
 #
 corrio <- function(data=NULL, visualize=TRUE) {
-    
+
     # Error handling. Start.
-    
+
     # data must be a data.frame with exactly two columns.
     if(is.null(data) | !(is.data.frame(x=data) | is.matrix(x=data)) || ncol(x=data)!=2) {
         stop("The function argument 'data' must be of class data.frame. It must contain exactly two columns, which shall be analyzed by the Pearson product-moment correlation method.")
     }
-    
+
     # Both columns of the data.frame must be numeric.
     bothNumeric <- unlist(lapply(data, FUN=class))
     if(!all(bothNumeric == "numeric")) {
         stop("Both columns of the data frame must be of class 'numeric'. Both columns are assumed to be on a continuous scale, e.g., centimeter or inch.")
     }
-    
+
     # visualize must either be TRUE or FALSE.
     if(length(visualize)!=1 || is.na(x=visualize) || is.numeric(x=visualize) || !any(c(visualize==TRUE, visualize==FALSE))) {
         stop("The function argument 'visualize' must be either TRUE or FALSE.")
     }
-    
+
     # Error handling. Stop.
-    
-    if(tibble::is.tibble(data)) {
+
+    if(tibble::is_tibble(data)) {
         data <- data.frame(data)
     }
-    
+
     # ---------------------------------------
     variable1 <- data[,1]
     variable2 <- data[,2]
-    
+
     mean1 <- mean(variable1)
     mean2 <- mean(variable2)
-    
+
     val1Mean1 <- variable1 - mean1
     val2Mean2 <- variable2 - mean2
     covVec <- val1Mean1*val2Mean2
     covDf <- data.frame(x=variable1, y=variable2, val1Mean1, val2Mean2, covVec)
     colnames(covDf)[c(3,4)] <- c("x-mean(x)", "y-mean(y)")
-    
+
     attr(mean1, "Explanation") <- "Mean of variable 1 (variable 1 = x)."
     attr(mean2, "Explanation") <- "Mean of variable 2 (variable 2 = y)."
     negSum <- sum(covDf$covVec[covDf$covVec <= 0])
@@ -131,11 +131,11 @@ corrio <- function(data=NULL, visualize=TRUE) {
     if(scnCheck[3]>0) {
         scn[covDf[,"covVec"]==0L] <- "n"
     }
-    
+
     # Theoretically possible, if not c, s, and n exist:
     # cs, cn, or sn.
     csnTheoretical <- c("sc", "cn", "sn")
-    
+
     if(length(unique(scn))==2) {
         scnCheck <- scnCheck[scnCheck!=0]
         scnSet <- which(csnTheoretical %in% paste0(names(scnCheck), collapse = ""))
@@ -143,20 +143,20 @@ corrio <- function(data=NULL, visualize=TRUE) {
     } else {
         scn <- factor(scn, levels = c("c", "s", "n"))
     }
-    
+
     vals1 <- c(variable1, rep(mean1, times=nrow(data)))
     vals2 <- c(variable2, rep(mean2, times=nrow(data)))
     vars1 <- as.factor(rep(1:2, each=nrow(data)))
     vars2 <- as.factor(rep(3:4, each=nrow(data)))
     pairs <- as.factor(rep(1:nrow(data), times=2))
-    
+
     pairs1 <- as.factor(rep(1:nrow(data), times=2))
     pairs1Range <- range(as.numeric(as.character(pairs1)))
     nxt <- nrow(data) + 1
     nxtLast <- nxt + (nrow(data)-1)
     pairs2 <- as.factor(rep(nxt:nxtLast, times=2))
     pairs2Range <- range(as.numeric(as.character(pairs2)))
-    
+
     if(length(unique(scn))==2) {
         clr <- as.factor(rep(scn, times=2))
         if(scnSet == 1) {
@@ -170,18 +170,18 @@ corrio <- function(data=NULL, visualize=TRUE) {
         clr <- factor(rep(scn, times=2), c("c", "s", "n"))
         useColor <- c("c"= "#F8766D", "s" = "#00BFC4", "n" = "#C77CFF")
     }
-    
+
     prop_scn <- as.numeric(prop.table(table(scn))*100)
     names(prop_scn) <- levels(clr)
     attr(prop_scn, "Explanation") <- "Percentages of pairwise directions of s, c, n (s = same, c = contrary, n = no)"
-    
+
     detailsLs <- list(mean1, mean2, negSum, posSum, numeratorCov, denominatorCov, covariance,
                       sd1, sd2, prodSD, correlation, prop_scn)
-    
+
     if(visualize) {
         plotData <- tibble::tibble(vals1, vals2, vars1, vars2,
                                    pairs1, pairs2, pairs, clr)
-        
+
         plot1 <-
             ggplot2::ggplot(data=plotData, aes(x=vars1, y=vals1, group=1, color=clr)) +
             geom_line(aes(group=pairs)) +
@@ -199,7 +199,7 @@ corrio <- function(data=NULL, visualize=TRUE) {
                 legend.text=element_text(size=16),
                 legend.title = element_blank(),
                 legend.position = "top")
-        
+
         plot2 <-
             ggplot2::ggplot(data=plotData, aes(x=pairs1, y=vals1, group=pairs1, color=clr)) +
             geom_line(aes(group=pairs1), linewidth=1) +
@@ -219,7 +219,7 @@ corrio <- function(data=NULL, visualize=TRUE) {
                 legend.text=element_text(size=16),
                 legend.title = element_blank(),
                 legend.position = "top")
-        
+
         return(list(dat=covDf, details=detailsLs, plot1=plot1, plot2=plot2))
     } else {
         return(list(dat=covDf, details=detailsLs, plot="Set function argument 'visualize' to TRUE to see plots 1 and 2."))
